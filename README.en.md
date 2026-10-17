@@ -8,6 +8,9 @@ only code and documentation. Everything is built from your own legal copy.
 
 ## What was done
 
+Full engine reverse-engineering report (RU): [docs/ENGINE_RU.md](docs/ENGINE_RU.md)
+
+
 - 112 dialogue scripts translated to Russian (ported from the Vita fan translation).
 - Cyrillic embedded into the engine font atlases; character codes preserved.
 - Root cause of overlapping letters found and fixed: the engine advances glyphs
