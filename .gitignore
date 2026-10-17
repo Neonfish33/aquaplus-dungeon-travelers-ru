@@ -1,0 +1,14 @@
+﻿# Game assets / build outputs (never commit)
+*.pck
+*.exe
+*.dll
+*.asi
+*.log
+*.bin
+*.png
+*.zip
+dist/
+__pycache__/
+*.obj
+*.lib
+*.exp
