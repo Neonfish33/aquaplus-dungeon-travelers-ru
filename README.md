@@ -42,7 +42,6 @@
 ## Сборка патча (из своей копии)
 
 ```
-python tools/port_pc.py            # порт скриптов Vita -> PC (нужны исходники перевода)
 python tools/pack_ru.py            # перевод диалогов -> Data\ENG\Script (ID говорящих сохраняются)
 python tools/pack_param.py         # имена/описания -> Data\ENG\Parameter (оригиналы в Parameter_orig)
 python tools/inject_ru.py          # вставка кириллицы в Font1.pck / Font2.pck
@@ -50,6 +49,9 @@ python tools/patch_static.py       # статический патч DT2_en.exe 
 ```
 
 `tools/translit.py` — таблица транслитерации (кириллица -> ASCII-коды шрифта).
+`tools/port_pc.py` — библиотека разбора/сборки PCK (`parse`/`build`), её использует
+`pack_ru.py`. Как отдельный шаг сборки не нужна: ранний черновик портировал
+Vita-скрипты, финальный текст собирается из CSV перевода.
 `tools/build_all.bat` — сборка 32-битных `hookfont.dll`/`injector.exe`
 (вариант с DLL-хуком, для отладки; в поставке не нужен).
 

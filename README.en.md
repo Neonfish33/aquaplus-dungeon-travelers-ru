@@ -42,7 +42,6 @@ Details and addresses: [docs/REVERSE_EN.md](docs/REVERSE_EN.md)
 ## Building the patch (from your copy)
 
 ```
-python tools/port_pc.py            # port Vita scripts to PC (translation sources required)
 python tools/pack_ru.py            # dialogue translation -> Data\ENG\Script (speaker IDs kept)
 python tools/pack_param.py         # names/descriptions -> Data\ENG\Parameter (originals in Parameter_orig)
 python tools/inject_ru.py          # inject Cyrillic into Font1.pck / Font2.pck
@@ -50,6 +49,9 @@ python tools/patch_static.py       # static patch of DT2_en.exe (adds .rufix sec
 ```
 
 `tools/translit.py` — Cyrillic-to-ASCII code table used by the packers.
+`tools/port_pc.py` — PCK parse/build library (`parse`/`build`) used by
+`pack_ru.py`. Not a build step: the early draft ported Vita scripts, while the
+final text is packed from the translation CSV.
 `tools/build_all.bat` builds 32-bit `hookfont.dll`/`injector.exe`
 (the DLL hook variant used during development; not needed for the release).
 
