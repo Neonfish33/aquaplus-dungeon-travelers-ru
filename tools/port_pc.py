@@ -4,11 +4,11 @@ import struct
 import sys
 import shutil
 
-PC_SCRIPT = r"C:\Users\yagan\Downloads\DungeonTravelers2_EN\Data\ENG\Script"
-PC_PARAM = r"C:\Users\yagan\Downloads\DungeonTravelers2_EN\Data\ENG\Parameter"
-VITA = r"C:\Users\yagan\Downloads\перевод\extracted\PCSE00693"
-VITA_SCRIPT = os.path.join(VITA, "Script")
-VITA_PARAM = os.path.join(VITA, "Parameter")
+PC_SCRIPT = os.environ.get("DT2_PC_SCRIPT", os.path.join("Data", "ENG", "Script"))
+PC_PARAM = os.environ.get("DT2_PC_PARAM", os.path.join("Data", "ENG", "Parameter"))
+VITA = os.environ.get("DT2_VITA", "")
+VITA_SCRIPT = os.path.join(VITA, "Script") if VITA else ""
+VITA_PARAM = os.path.join(VITA, "Parameter") if VITA else ""
 
 
 def parse(d):

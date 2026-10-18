@@ -60,6 +60,8 @@ Vita-скрипты, финальный текст собирается из CSV
 - Windows, Python 3 (Pillow, numpy), MSVC Build Tools (x86) — только для сборки.
 - Игра: PC-версия 1.0 (`DT2_en.exe`, 2 697 728 байт). Патч привязан к адресам
   этой сборки.
+- Файлы перевода (в репозиторий не входят): `перевод/translation_template.ru.csv`
+  и `перевод/parameter.ru.tsv`; шрифт `C:\Windows\Fonts\arialbd.ttf` (Arial Bold).
 
 ## Правовой статус
 

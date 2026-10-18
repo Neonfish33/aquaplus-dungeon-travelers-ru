@@ -60,6 +60,8 @@ final text is packed from the translation CSV.
 - Windows, Python 3 (Pillow, numpy), MSVC Build Tools (x86) for building.
 - Game: PC version 1.0 (`DT2_en.exe`, 2,697,728 bytes). The patch is bound to
   this build's addresses.
+- Translation files (not in the repository): `перевод/translation_template.ru.csv`
+  and `перевод/parameter.ru.tsv`; font `C:\Windows\Fonts\arialbd.ttf` (Arial Bold).
 
 ## Legal
 
