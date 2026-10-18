@@ -11,7 +11,7 @@ only code and documentation. Everything is built from your own legal copy.
 Full engine reverse-engineering report (RU): [docs/ENGINE_RU.md](docs/ENGINE_RU.md)
 
 
-- 112 dialogue scripts translated to Russian (ported from the Vita fan translation);
+- 112 dialogue scripts translated to Russian (full project translation);
   line breaks from the translation are preserved.
 - The 3-byte speaker ID at the start of each text chunk is preserved: without it
   the engine ate the first letters and name plates broke.
@@ -61,8 +61,8 @@ python tools/patch_static.py       # static patch of DT2_en.exe (adds .rufix sec
 
 ## Legal
 
-The game and its assets belong to their owners. The text translation is the work
-of Menori Co. (Vita). This repository contains neither game assets nor the
+The game and its assets belong to their owners. The text translation was made by
+the project contributors. This repository contains neither game assets nor the
 translation. Do not redistribute archives containing game assets.
 
 ## Code license

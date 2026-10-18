@@ -49,7 +49,8 @@ Indexed by character code; `advanceX` derives from the English glyph width
 
 ## 3. Text port
 
-- Source: Vita fan translation (Menori Co.), `Script/*.pck`, `*.adv.bin` blobs.
+- Text source: the project translation; Vita scripts were used only as a
+  technical PCK structure template, `Script/*.pck`, `*.adv.bin` blobs.
 - PC and Vita scripts differ only in the 8-byte PCK header; `adv.bin` contents
   have the same structure.
 - `tools/port_pc.py`: parses the PC template (names/offsets preserved),
