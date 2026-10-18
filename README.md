@@ -1,4 +1,4 @@
-# Dungeon Travelers 2 — Russian text tools
+# Aquaplus Dungeon Travelers 2 — RU localization tools
 
 Инструменты и техническая документация для русского текста в
 **Dungeon Travelers 2: The Royal Library & The Monster Seal** (PC, ENG 1.0).
