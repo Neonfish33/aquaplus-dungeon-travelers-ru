@@ -35,6 +35,8 @@ assert len(w) == 256
 
 B = img_base + new_va
 CUR, LASTX, Y = B + 0xE0, B + 0xE4, B + 0xE8
+MARG = B + 0xEC
+SCRATCH = B + 0xF0
 TAB = B + 0x200
 
 code = bytearray()
@@ -47,7 +49,7 @@ jne = len(code); code += b'\x75\x00'
 code += b'\x3b\x3d' + struct.pack('<I', LASTX)
 ja = len(code); code += b'\x77\x00'
 reset = len(code)
-code += b'\x89\x3d' + struct.pack('<I', CUR)
+code += b'\xc7\x05' + struct.pack('<I', CUR) + struct.pack('<i', 22)
 code += b'\x89\x1d' + struct.pack('<I', Y)
 cont = len(code)
 code += b'\xa1' + struct.pack('<I', CUR)
@@ -70,7 +72,7 @@ struct.pack_into('<i', code, jmp + 1, 0x44795A - (B + jmp + 5))
 
 blob = bytearray(0x1000)
 blob[0:len(code)] = code
-struct.pack_into('<iii', blob, 0xE0, 0, 0, -1)
+struct.pack_into('<iiii', blob, 0xE0, 0, 0, -1, 0)
 blob[0x200:0x300] = bytes(min(v, 255) for v in w)
 
 d += b'\x00' * (new_off - len(d))

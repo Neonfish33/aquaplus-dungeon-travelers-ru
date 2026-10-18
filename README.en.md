@@ -11,11 +11,24 @@ only code and documentation. Everything is built from your own legal copy.
 Full engine reverse-engineering report (RU): [docs/ENGINE_RU.md](docs/ENGINE_RU.md)
 
 
-- 112 dialogue scripts translated to Russian (ported from the Vita fan translation).
+- 112 dialogue scripts translated to Russian (ported from the Vita fan translation);
+  line breaks from the translation are preserved.
+- The 3-byte speaker ID at the start of each text chunk is preserved: without it
+  the engine ate the first letters and name plates broke.
+- Item/skill/class names and descriptions translated: 13
+  `Data\ENG\Parameter\*.bin` files (strings appended at EOF, table pointers
+  patched; originals kept in `Parameter_orig`).
 - Cyrillic embedded into the engine font atlases; character codes preserved.
-- Root cause of overlapping letters found and fixed: the engine advances glyphs
-  using the original English font metrics. Fixed with a static patch of
-  `DT2_en.exe`: a per-line cursor inside `FindGlyph`, no DLL/ASI.
+- Root cause of overlapping letters and inconsistent left margin found: the
+  engine advances glyphs using the original English metrics. Fixed with a static
+  patch of `DT2_en.exe` (`.rufix` section, per-line cursor inside `FindGlyph`,
+  22 px left margin), no DLL/ASI.
+
+Known limitations: some speaker name plates stay in Latin (the name comes from a
+separate script string), baked video/texture text (intro subtitles, menu logo)
+is not translated, `Parameter` coverage is partial. Glyph widths are set by the
+patch stub: field `+8` in the `UI.tex/UI2.tex` tables turned out not to be the
+advance (verified with in-memory markers) — the engine computes the step in code.
 
 Details and addresses: [docs/REVERSE_EN.md](docs/REVERSE_EN.md)
 (Russian: [docs/REVERSE_RU.md](docs/REVERSE_RU.md)).
@@ -30,10 +43,13 @@ Details and addresses: [docs/REVERSE_EN.md](docs/REVERSE_EN.md)
 
 ```
 python tools/port_pc.py            # port Vita scripts to PC (translation sources required)
+python tools/pack_ru.py            # dialogue translation -> Data\ENG\Script (speaker IDs kept)
+python tools/pack_param.py         # names/descriptions -> Data\ENG\Parameter (originals in Parameter_orig)
 python tools/inject_ru.py          # inject Cyrillic into Font1.pck / Font2.pck
 python tools/patch_static.py       # static patch of DT2_en.exe (adds .rufix section)
 ```
 
+`tools/translit.py` — Cyrillic-to-ASCII code table used by the packers.
 `tools/build_all.bat` builds 32-bit `hookfont.dll`/`injector.exe`
 (the DLL hook variant used during development; not needed for the release).
 
