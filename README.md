@@ -6,11 +6,11 @@
 
 ## Документация
 
-| Файл | Что внутри |
-|---|---|
-| [docs/PROJECT_MAP_RU.md](docs/PROJECT_MAP_RU.md) | состав проекта, форматы, что умеем раскладывать, план Android |
-| [docs/ENGINE_RU.md](docs/ENGINE_RU.md) | подробный реверс: адреса, функции, шрифты, `.rufix`, проверки |
-| [docs/ENGINE_ACTIONS_RU.md](docs/ENGINE_ACTIONS_RU.md) | карта «действие → адрес/класс», опкоды, семейства классов |
+| Документ | Русский | English |
+|---|---|---|
+| Карта проекта: состав, форматы, Android | [PROJECT_MAP_RU](docs/PROJECT_MAP_RU.md) | [PROJECT_MAP_EN](docs/PROJECT_MAP_EN.md) |
+| Полный отчёт по реверсу | [ENGINE_RU](docs/ENGINE_RU.md) | [ENGINE_EN](docs/ENGINE_EN.md) |
+| Карта движка: действие → адрес/класс, опкоды | [ENGINE_ACTIONS_RU](docs/ENGINE_ACTIONS_RU.md) | [ENGINE_ACTIONS_EN](docs/ENGINE_ACTIONS_EN.md) |
 
 ## Что сделано
 

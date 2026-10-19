@@ -6,11 +6,11 @@ files, fonts or translation. Everything is built from your own legal copy.
 
 ## Documentation
 
-| File | Contents |
-|---|---|
-| [docs/PROJECT_MAP_RU.md](docs/PROJECT_MAP_RU.md) | project inventory, formats, unpacking status, Android plan (RU) |
-| [docs/ENGINE_RU.md](docs/ENGINE_RU.md) | detailed reverse engineering: addresses, functions, fonts, `.rufix` (RU) |
-| [docs/ENGINE_ACTIONS_RU.md](docs/ENGINE_ACTIONS_RU.md) | action → address/class map, opcodes, class families (RU) |
+| Document | Russian | English |
+|---|---|---|
+| Project map: inventory, formats, Android | [PROJECT_MAP_RU](docs/PROJECT_MAP_RU.md) | [PROJECT_MAP_EN](docs/PROJECT_MAP_EN.md) |
+| Full reverse-engineering report | [ENGINE_RU](docs/ENGINE_RU.md) | [ENGINE_EN](docs/ENGINE_EN.md) |
+| Engine map: action → address/class, opcodes | [ENGINE_ACTIONS_RU](docs/ENGINE_ACTIONS_RU.md) | [ENGINE_ACTIONS_EN](docs/ENGINE_ACTIONS_EN.md) |
 
 ## Done
 
