@@ -1,5 +1,7 @@
 # Dungeon Travelers 2 — карта движка: что какое действие отвечает
 
+English: [ENGINE_ACTIONS_EN.md](ENGINE_ACTIONS_EN.md)
+
 Сводка по внутреннему устройству PC-версии: адреса функций, классы, опкоды,
 форматы. Дополняет [PROJECT_MAP_RU.md](PROJECT_MAP_RU.md) и
 [ENGINE_RU.md](ENGINE_RU.md).
