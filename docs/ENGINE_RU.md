@@ -409,7 +409,6 @@ vtable `0x65C280`:
 | `tools/hookfont.cpp` | dev-вариант DLL-хука (эталон алгоритма курсора) |
 | `tools/injector.cpp` | инжект DLL в живой процесс |
 | `tools/build_all.bat` | сборка x86 DLL/инжектора |
-| `tools/width_table.txt` | таблица ширин (256 байт) |
 
 ---
 
